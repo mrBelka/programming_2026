@@ -4,7 +4,7 @@
 
 ## Инструкции
 
-### Выбор терминала по умолчанию  
+### Выбор терминала по умолчанию
 1. File->Preferences->Settings
 2. В поиске ввести "default terminal" или найти по дереву "Terminal › Integrated › Default Profile: Windows"
 3. Выбрать Git Bash (у вас должен быть установлен клиент [git-scm](https://git-scm.com/))
@@ -74,4 +74,27 @@ git push
 Стянуть изменения с удаленного репозитория
 ```
 git pull
+```
+
+Отменить все незакоммиченные изменения
+```
+git restore .
+```
+
+### Pre-commit tool
+Установить в Git Bash
+```
+pip install pre-commit
+```
+
+Создать в корне проекта файл `.pre-commit-config.yaml` с правилами форматирования.
+
+Запустить pre-commit
+```
+pre-commit run --all
+```
+
+### Тесты
+```
+ctest --test-dir build/subproject_with_tests/test -C Debug --output-on-failure
 ```

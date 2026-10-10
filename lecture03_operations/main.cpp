@@ -114,7 +114,7 @@ int main() {
     bool b1 = (a == b); // целые числа
     bool b3 = (0 == b);
 
-    // 
+    //
     const double EPS = 1e-9; // 1*10^-9
     //double d1 = 1.234578;
     //double d2 = 2.342526;
@@ -139,7 +139,7 @@ int main() {
     // 0001
     // 1011
     std::cout << z << std::endl;
-    
+
     //a == b;
 
     // Битовые операции
@@ -179,7 +179,7 @@ int main() {
     state = state | (1 << 8);
     state = state & ~(1 << 8); // 1 * 2^8
 
-    
+
 
     return 0;
 }
