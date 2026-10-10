@@ -4,4 +4,5 @@ project(programming_2026)
 
 add_subdirectory(lecture02_types_and_operations)
 add_subdirectory(lecture03_operations)
+add_subdirectory(lecture04_conditions_n_cycles)
 add_subdirectory(subproject_with_tests)
