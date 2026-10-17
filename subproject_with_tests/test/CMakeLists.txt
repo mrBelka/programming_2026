@@ -1,12 +1,7 @@
-include(FetchContent)
-
-FetchContent_Declare(
-    googletest
-    URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
-)
-
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
+add_subdirectory(${CMAKE_SOURCE_DIR}/thirdparty/googletest-src
+                 ${CMAKE_BINARY_DIR}/thirdparty/googletest-build
+                 EXCLUDE_FROM_ALL)
 
 add_executable(func_tests test_func.cpp)
 
