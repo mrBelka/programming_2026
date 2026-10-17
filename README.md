@@ -96,5 +96,5 @@ pre-commit run --all
 
 ### Тесты
 ```
-ctest --test-dir build/subproject_with_tests/test -C Debug --output-on-failure
+ctest --test-dir build/test_example/test -C Debug --output-on-failure
 ```
