@@ -1,7 +1,8 @@
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+set(gtest_force_shared_crt
+    ON
+    CACHE BOOL "" FORCE)
 add_subdirectory(${CMAKE_SOURCE_DIR}/thirdparty/googletest-src
-                 ${CMAKE_BINARY_DIR}/thirdparty/googletest-build
-                 EXCLUDE_FROM_ALL)
+                 ${CMAKE_BINARY_DIR}/thirdparty/googletest-build EXCLUDE_FROM_ALL)
 
 add_executable(func_tests test_func.cpp)
 
