@@ -1,7 +1,8 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 
-int main() {
+int main()
+{
   // 1. if, if..else
   int a = 5;
   int x = 10;
@@ -10,10 +11,9 @@ int main() {
       std::cout << "Even" << std::endl;
       x += 2;
     }
-  } else if(x > 0) {
+  } else if (x > 0) {
     std::cout << "Odd" << std::endl;
-  }
-  else {
+  } else {
     //...
   }
 
@@ -27,13 +27,20 @@ int main() {
     std::cout << "File not found" << std::endl;
   }
 
-  switch(error_code) {
-    case 2:
-    case 1:
-    case 0: std::cout << "Success" << std::endl; break;
-    case -1: std::cout << "File not found" << std::endl; break;
-    case -2: std::cout << "File not found" << std::endl; break;
-    default: std::cout << "Unknown code" << std::endl;
+  switch (error_code) {
+  case 2:
+  case 1:
+  case 0:
+    std::cout << "Success" << std::endl;
+    break;
+  case -1:
+    std::cout << "File not found" << std::endl;
+    break;
+  case -2:
+    std::cout << "File not found" << std::endl;
+    break;
+  default:
+    std::cout << "Unknown code" << std::endl;
   }
 
   // Тернарный оператор
@@ -43,7 +50,7 @@ int main() {
     std::cout << "Odd" << std::endl;
   }
 
-  bool isEven = (x%2 == 0) && (a>0) && (a%5 == 0);
+  bool isEven = (x % 2 == 0) && (a > 0) && (a % 5 == 0);
   std::cout << (isEven ? "Even" : "Odd") << std::endl;
 
   // Cycles
@@ -53,7 +60,7 @@ int main() {
   std::cout << 10 << std::endl;
 
   // While
-  int i = 1; // Переменная-счетчик (итератор)
+  int i = 1;        // Переменная-счетчик (итератор)
   while (i <= 10) { // Условие
     // Тело цикла
     std::cout << i << std::endl;
@@ -68,8 +75,7 @@ int main() {
   // do..while
   do {
     // тело цикла
-  }
-  while(i <= 10);
+  } while (i <= 10);
 
   // Распаковка натурального числа
   int y = 1123;
@@ -96,14 +102,9 @@ int main() {
       }
       tmp_y /= 10;
     }
-    if(digit_max < digit_cnt) {
+    if (digit_max < digit_cnt) {
       digit_max = digit_cnt;
       digit_name = j;
     }
   }
-
-
-
-
-
 }

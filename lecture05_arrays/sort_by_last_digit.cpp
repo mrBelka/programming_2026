@@ -4,7 +4,8 @@
 // Если среди них есть два одинаковых числа,
 // упорядочить последовательность по невозрастанию последней цифры.
 
-int main() {
+int main()
+{
   const int NMax = 10000;
   int n;
   std::cin >> n;
@@ -35,17 +36,17 @@ int main() {
 
   // Сортируем пузырьком по последней цифре (сначала большие цифры).
   if (is_equal_nums) {
-      for (int i = 0; i < n-1; ++i) {
-        for (int j = i+1; j < n; ++j) {
-          int ith_last = a[i] % 10;
-          int jth_last = a[j] % 10;
-          if (ith_last < jth_last) {
-            int tmp = a[i];
-            a[i] = a[j];
-            a[j] = tmp;
-          }
+    for (int i = 0; i < n - 1; ++i) {
+      for (int j = i + 1; j < n; ++j) {
+        int ith_last = a[i] % 10;
+        int jth_last = a[j] % 10;
+        if (ith_last < jth_last) {
+          int tmp = a[i];
+          a[i] = a[j];
+          a[j] = tmp;
         }
       }
+    }
   }
 
   for (int i = 0; i < n; i = i + 1) {
