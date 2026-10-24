@@ -1,0 +1,27 @@
+name: Build All Targets
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup MSVC
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Configure
+        run: cmake -S . -B build -G "Ninja" -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build all targets
+        run: cmake --build build --config Release --target all
+
+      - name: List built targets
+        run: Get-ChildItem -Path build -Recurse -Include *.exe,*.lib,*.dll | Select-Object -First 30
