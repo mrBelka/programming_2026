@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "func.hpp"
+#include <func.hpp>
 
 TEST(IsPrimeTest, NegativeAndSmallNumbers)
 {

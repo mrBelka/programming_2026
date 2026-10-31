@@ -97,4 +97,6 @@ pre-commit run --all
 ### Тесты
 ```
 ctest --test-dir build/test_example/test -C Debug --output-on-failure
+
+ctest --test-dir build/test_example/test -V -R "IsPrimeTest"
 ```
