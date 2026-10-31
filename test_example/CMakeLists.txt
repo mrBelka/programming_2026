@@ -7,8 +7,7 @@ project(test_example)
 # Собираем статическую библиотеку func из файла func.cpp
 add_library(func STATIC func.cpp)
 
-# Разрешаем всем, кто подключает библиотеку func,
-# находить её заголовочные файлы в текущей папке
+# Разрешаем всем, кто подключает библиотеку func, находить её заголовочные файлы в текущей папке
 target_include_directories(func PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Собираем исполняемый файл test_example из main.cpp

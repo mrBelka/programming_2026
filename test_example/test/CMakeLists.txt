@@ -3,8 +3,7 @@ set(gtest_force_shared_crt
     ON
     CACHE BOOL "" FORCE)
 
-# Подключаем исходники GoogleTest из папки thirdparty
-# и собираем их в отдельную папку сборки
+# Подключаем исходники GoogleTest из папки thirdparty и собираем их в отдельную папку сборки
 add_subdirectory(${CMAKE_SOURCE_DIR}/thirdparty/googletest-src
                  ${CMAKE_BINARY_DIR}/thirdparty/googletest-build EXCLUDE_FROM_ALL)
 
