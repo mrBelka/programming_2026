@@ -4,10 +4,17 @@
 
 TEST(IsPrimeTest, NegativeAndSmallNumbers)
 {
-  EXPECT_FALSE(isPrime(-10));
+  // EXPECT_TRUE
+  // std::cout << "=== " << isPrime(-10) << std::endl;
+  // EXPECT_EQ(isPrime(-10), true);
+  // EXPECT_LT
+  // EXPECT_GT
+  EXPECT_FALSE(isPrime(-10)) << "-10 is not prime";
   EXPECT_FALSE(isPrime(-1));
   EXPECT_FALSE(isPrime(0));
   EXPECT_FALSE(isPrime(1));
+
+  // ASSERT_TRUE(false);
 }
 
 TEST(IsPrimeTest, SmallPrimes)

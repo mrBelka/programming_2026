@@ -1,4 +1,5 @@
 #include "math.hpp"
+#include <iostream>
 
 namespace mathUtils {
 bool isPrime(int number)
